@@ -1,0 +1,12 @@
+<resources>
+
+    <dimen name="button_margin_end">@dimen/_25sdp</dimen>
+    <dimen name="button_margin_start">@dimen/_22sdp</dimen>
+
+    <dimen name="font_bigger">@dimen/_19sdp</dimen>
+    <dimen name="font_big">@dimen/_17sdp</dimen>
+    <dimen name="font_high">@dimen/_14sdp</dimen>
+    <dimen name="font_mid">@dimen/_13sdp</dimen>
+    <dimen name="font_low">@dimen/_12sdp</dimen>
+
+</resources>

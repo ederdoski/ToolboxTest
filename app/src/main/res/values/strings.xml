@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">ToolboxTest</string>
+
+    <string name="header_title">Toolbox</string>
+
+    <string name="poster_title">Fox Contenido Basico</string>
+    <string name="thumb_title">Fox Play +</string>
+
+</resources>
