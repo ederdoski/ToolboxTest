@@ -20,7 +20,7 @@ Proyecto de prueba, que muestra una lista de peliculas con 2 tipos de categorias
 
 ## Observaciones
 
-* La aplicacion de ejemplo se encuentra en la ruta: [ToolboxTest --> app --> release]() - **app-release.apk**
+* La aplicacion de ejemplo se encuentra en la ruta: [app --> release](https://github.com/ederdoski/ToolboxTest/tree/master/app/release) - **app-release.apk**
 
 * Agregue una funcionalidad extra para guardar en cache las imagenes y evitar la carga por cada vez, sin embargo intencionalmente desactive el cache de los elementos "thumbs" y "poster" para que se observara que la carga contra el servidor se realizaba correctamente y no se repitiera la misma imagen siempre. 
 
