@@ -29,7 +29,8 @@ Proyecto de prueba, que muestra una lista de peliculas con 2 tipos de categorias
 
 ## JSON ejemplo
 	
-```[  
+```
+[  
    {  
       "title":"Carrousel thumb",
       "type":"thumb",
@@ -128,7 +129,8 @@ Proyecto de prueba, que muestra una lista de peliculas con 2 tipos de categorias
          }
       ]
    }
-]```
+]
+```
 
 ## Autor
 
