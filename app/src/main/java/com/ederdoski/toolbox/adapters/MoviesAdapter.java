@@ -1,13 +1,19 @@
 package com.ederdoski.toolbox.adapters;
 
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.Point;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +23,8 @@ import com.ederdoski.toolbox.models.Movies;
 import com.ederdoski.toolbox.utils.Functions;
 
 import java.util.ArrayList;
+
+import butterknife.internal.Utils;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.GroceryViewHolder>{
 
@@ -42,10 +50,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.GroceryVie
 
         String titleMovie = aMovies.get(position).getTitle();
 
-        DisplayMetrics displaymetrics = new DisplayMetrics();
-        act.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-
-        holder.cardMovie.getLayoutParams().height = displaymetrics.widthPixels / 2;
+        holder.cardMovie.getLayoutParams().height = setNumberOfCarrousels() / 2;
 
         if(type.equals("thumb")){
 
@@ -53,7 +58,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.GroceryVie
                 titleMovie = titleMovie.substring(0,18) + "...";
             }
 
-            holder.cardMovie.getLayoutParams().width = displaymetrics.widthPixels / 2;
+            holder.cardMovie.getLayoutParams().width = setNumberOfCarrousels() / 2;
             Functions.setImage(act, aMovies.get(position).getUrl(), 640, 480, false, holder.imgMovie);
         }
 
@@ -63,7 +68,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.GroceryVie
                 titleMovie = titleMovie.substring(0,11) + "...";
             }
 
-            holder.cardMovie.getLayoutParams().width = displaymetrics.widthPixels / 3;
+            holder.cardMovie.getLayoutParams().width = setNumberOfCarrousels() / 3;
             Functions.setImage(act, aMovies.get(position).getUrl(), 320, 480, false, holder.imgMovie);
         }
 
@@ -72,7 +77,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.GroceryVie
             if(titleMovie.length() > 12){
                 titleMovie = titleMovie.substring(0,10) + "...";
             }
-            holder.cardMovie.getLayoutParams().width = displaymetrics.widthPixels / 3;
+            holder.cardMovie.getLayoutParams().width = setNumberOfCarrousels() / 3;
             Functions.setImage(act, aMovies.get(position).getUrl(), 320, 480, true, holder.imgMovie);
         }
 
@@ -106,4 +111,11 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.GroceryVie
             txtview   = view.findViewById(R.id.txtTitle);
         }
     }
+
+    private int setNumberOfCarrousels(){
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        act.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        return displaymetrics.widthPixels;
+    }
+
 }

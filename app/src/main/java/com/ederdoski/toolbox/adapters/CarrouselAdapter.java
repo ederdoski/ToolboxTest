@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class CarrouselAdapter extends RecyclerView.Adapter<CarrouselAdapter.MyViewHolder> {
 
-    private Context mContext;
+    private Activity act;
     private List<Carrousel> albumList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -34,8 +35,8 @@ public class CarrouselAdapter extends RecyclerView.Adapter<CarrouselAdapter.MyVi
     }
 
 
-    public CarrouselAdapter(Context mContext, List<Carrousel> albumList) {
-        this.mContext = mContext;
+    public CarrouselAdapter(Activity act, List<Carrousel> albumList) {
+        this.act       = act;
         this.albumList = albumList;
     }
 
@@ -50,8 +51,8 @@ public class CarrouselAdapter extends RecyclerView.Adapter<CarrouselAdapter.MyVi
 
         Carrousel aCarrousel = albumList.get(position);
 
-        MoviesAdapter moviesAdapter = new MoviesAdapter((Activity) mContext, aCarrousel.getItems(), aCarrousel.getType());
-        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+        MoviesAdapter moviesAdapter = new MoviesAdapter(act, aCarrousel.getItems(), aCarrousel.getType());
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(act, LinearLayoutManager.HORIZONTAL, false);
 
         holder.title.setText(aCarrousel.getTitle());
         holder.listCarrousel.setLayoutManager(horizontalLayoutManager);

@@ -119,8 +119,8 @@ public class Functions {
             Glide.with(act)
                     .load(path)
                     .apply(new RequestOptions()
-                            .error(R.mipmap.ic_launcher)
-                            .placeholder(R.mipmap.ic_launcher)
+                            .error(R.mipmap.ic_launcher_foreground)
+                            .placeholder(R.mipmap.ic_launcher_foreground)
                     .override(width, height)
                             .fitCenter())
                     .into(imgView);
@@ -129,29 +129,12 @@ public class Functions {
                     .load(path)
                     .apply(new RequestOptions()
                             .signature(new ObjectKey(String.valueOf(System.currentTimeMillis())))
-                            .error(R.mipmap.ic_launcher)
-                            .placeholder(R.mipmap.ic_launcher)
+                            .error(R.mipmap.ic_launcher_foreground)
+                            .placeholder(R.mipmap.ic_launcher_foreground)
                             .override(width, height)
                             .fitCenter())
                     .into(imgView);
         }
-    }
-
-
-
-
-    //-------------------------------------- FONTS  ------------------------------------------------------------------------
-
-    public final static void setFontLight(Activity act, TextView text) {
-        Typeface face = Typeface.createFromAsset(act.getAssets(),
-                "fonts/Gotham Rounded Book.otf");
-        text.setTypeface(face);
-    }
-
-    public final static void setFontBold(Activity act, TextView text) {
-        Typeface face = Typeface.createFromAsset(act.getAssets(),
-                "fonts/gothamrounded_bold.otf");
-        text.setTypeface(face);
     }
 
 }

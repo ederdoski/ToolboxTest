@@ -74,7 +74,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="fffdfd" />
+                                      <entry key="imageAsset" value="C:\Users\ederd\Desktop\ilkjtooc_400x400.jpg" />
                                     </map>
                                   </option>
                                 </PersistentState>

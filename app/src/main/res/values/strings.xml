@@ -4,7 +4,8 @@
 
     <string name="header_title">Toolbox</string>
 
-    <string name="poster_title">Fox Contenido Basico</string>
-    <string name="thumb_title">Fox Play +</string>
+    <string name="btn_ok">OK</string>
+    <string name="txt_ups">Ups…! </string>
+    <string name="txt_no_internet">No posee una conexión activa a internet, algunas funcionalidades pueden presentar fallas.</string>
 
 </resources>
