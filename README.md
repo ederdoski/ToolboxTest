@@ -1,6 +1,6 @@
 # ToolboxTest
 
-![Example](img/example.jpeg)   asasasasasas ![Example2](img/example2.jpeg)
+![Example](img/example.jpeg) ______ ![Example2](img/example2.jpeg)
 
 ## Introducción
 
