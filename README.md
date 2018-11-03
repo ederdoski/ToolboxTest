@@ -1,5 +1,7 @@
 # ToolboxTest
 
+![Example](img/example.jpeg)
+
 ## Introducción
 
 Proyecto de prueba, que muestra una lista de peliculas con 2 tipos de categorias, poster y thumbs, los mismos son cargados a travez de un JSON, mientras que las imagenes se generan aleatoriamente al hacer una solicitud a un servidor, los items pueden o no tener una película asociada que se reproducira al presionar la tarjeta.
